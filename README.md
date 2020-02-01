@@ -1,2 +1,2 @@
-# aws-sqs
-AWS SQS related resources for Infraxys
+# Infraxys module - AWS SQS
+
