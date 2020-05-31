@@ -1,16 +1,17 @@
 {
   "version": "1.0",
+  "id": "bc974de7-18dd-46bc-8569-5c74f3e98f41",
   "label": "SQS Queue Policy - %policy_name%",
   "type": "SQS-QUEUE-POLICY",
   "autoExpand": false,
   "skipEveryInstanceFiles": false,
   "limitToAllowedChildren": false,
   "autoGenerate": false,
-  "inheritFilesFromPacketGuid": "github.com\\infraxys-modules\\terraform\\master\\terraform helper",
   "key": "",
   "infoHtml": "\u003ch1\u003eAWS SQS Queue Policy\u003c/h1\u003e\n\u003cp\u003eSee \u003ca href\u003d\"https://www.terraform.io/docs/providers/aws/r/sqs_queue_policy.html\" target\u003d\"_blank\"\u003eTerraform Resource: aws_sqs_queue_policy \u003c/a\u003e\u003c/p\u003e",
   "attributes": [
     {
+      "id": "0583eba9-8632-4707-bee7-ace8081716bd",
       "name": "policy",
       "caption": "Policy",
       "type": "byte[]",
@@ -22,19 +23,20 @@
       "isPartOfKey": false,
       "height": 10,
       "listOfValues": "",
+      "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": true,
       "cloneAttribute": true,
-      "autoExport": true,
       "inputPrompt": "",
       "tooltip": "\u003cp\u003eThe JSON policy for the SQS queue.\u003c/p\u003e",
       "scope": "Instance",
       "defaultValue": "{\n  \"Version\": \"2012-10-17\",\n  \"Id\": \"sqspolicy\",\n  \"Statement\": [\n    {\n      \"Sid\": \"First\",\n      \"Effect\": \"Allow\",\n      \"Principal\": \"*\",\n      \"Action\": \"sqs:SendMessage\",\n      \"Resource\": \"${aws_sqs_queue.q.arn}\",\n      \"Condition\": {\n        \"ArnEquals\": {\n          \"aws:SourceArn\": \"${aws_sns_topic.example.arn}\"\n        }\n      }\n    }\n  ]\n}"
     },
     {
+      "id": "cd0f9d18-c0ef-48af-8780-5dbacd7ac82f",
       "name": "policy_name",
       "caption": "Name",
       "type": "java.lang.String",
@@ -45,13 +47,13 @@
       "required": true,
       "isPartOfKey": true,
       "listOfValues": "",
+      "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
-      "autoExport": true,
       "inputPrompt": "",
       "tooltip": "",
       "scope": "Instance",
@@ -60,7 +62,7 @@
   ],
   "files": [
     {
-      "guid": "bbb50fb6-d4c7-41c3-be2a-72c605888bdc",
+      "id": "bbb50fb6-d4c7-41c3-be2a-72c605888bdc",
       "filename": "sqs_queue_policy.tf",
       "includeName": "",
       "menuCaption": "sqs_queue_policy.tf",
@@ -79,7 +81,9 @@
       "menuSeparatorBefore": false,
       "hideFromInstanceActionsMenu": false,
       "hideFromBottomMenu": false,
-      "menuPath": ""
+      "menuPath": "",
+      "dockerImage": "",
+      "customCommand": ""
     }
   ],
   "allowedChildren": []
